@@ -18,7 +18,6 @@ switch_root:/# password root
 switch_root:/# touch /.autorelabel
 ```
 
-
 # RHEL 6
 
 1. Reboot the VM and press **“any key”** to enter the menu within 5 seconds. 
