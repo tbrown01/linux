@@ -2,11 +2,11 @@
 
 **NTP (Network Time Protocol)** is a networking protocol for clock synchronization between computer systems over packet-switched, variable-latency data networks.
 
-For RHEL 5 and 6, NTP is the default package used for time synchronization.
+**For RHEL 5-6**, **NTP** is the default package used for time synchronization.
 
-For RHEL 7 and 8 Chrony is the default package used for time synchronization.
+**For RHEL 7-8**, **Chrony** is the default package used for time synchronization.
 
-**NOTE:** Use either Chrony or NTP but not both on a Linux system.  **Chrony** is the suggested package to use for RHEL 7 and up.
+**NOTE:** Use **Chrony** or **NTP** but not both on a Linux system.  **Chrony** is the suggested package to use for RHEL 7 and up.
 
 ## Chrony Client-Side Setup
 
