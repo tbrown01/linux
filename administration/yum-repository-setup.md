@@ -27,7 +27,7 @@ yum update -y                       # Updates all packages
 
 yum list | grep httpd               # Searches yum repository for httpd package
 
-yum whatprovides */http.conf*       # Provides package associated with the httpd.conf
+yum whatprovides */http.conf*       # Provides install package associated with the httpd.conf
 
 yum update-minimal --security -y    # Applies security updates from Red Hat Satellite
 ```
