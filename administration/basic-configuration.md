@@ -2,13 +2,15 @@
 
 1. Configure Hostname.
 2. Configure Static IP Address, DNS, Default Gateway.
-3. Bootstrap to Configuration Management Tool (CFEngine, Puppet, Chef, etc).
+3. Bootstrap to Configuration Management Tool (CFEngine, Puppet, Chef, etc) which configures:
     - Chrony/NTP configuration
     - Yum Update to latest Packages
     - Bootstrap to Red Hat Satellite.
   
   ## RHEL 7 Basic Configuration
-  ```
+ 
+ RHEL 7 uses NetworkManager by default, however, we have NetworkManager disabled and configure the Network Script files for network access (same as RHEL 6). Each environment is different though.
+ ```
   hostnamectl set-hostname server01.example.com
   
  Edit file named /etc/sysconfig/network-scripts/ifcfg-eth0 as follows:
