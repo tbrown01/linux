@@ -20,7 +20,7 @@
 
 An essential feature of programming is the ability to use a name or a label to refer to some other quantity: such as a value, or a command. This is commonly referred to as variables.
 
-The name of a variable is a placeholder for its value, the data it holds. Referencing (retrieving) its value is called variable **substitution**.
+A variable is a placeholder for its value, the data it holds. Referencing (retrieving) its value is called **variable substitution**.
 ```
 domain='http://www.whitehouse.gov'
 path='/some/path'
