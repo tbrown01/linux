@@ -32,6 +32,19 @@ page='index.html'
 
 curl "$base_url/$page" -o "downloads/$page"
 ```
+## Positional Parameters
+
+A positional parameter is a variable within a shell program; its value is set from an argument specified on the command line that invokes the program. Positional parameters are numbered and are referred to with a preceding ``$'': $1, $2, $3, and so on.
+```
+~]$ ./some_script.sh word1 word2 word3
+```
+If some_program were a bash shell script, we could read each item on the command line because the positional parameters contain the following:
+```
+$0 would contain "some_script.sh"
+$1 would contain "word1"
+$2 would contain "word2"
+$3 would contain "word3"
+```
 ## Command Substitution
 
 The standard output of a command can be encapsulated, much like a value can be stored in a value, and then expanded by the shell. This is known as **command substitution**.  This can be done in 2 ways:
