@@ -35,8 +35,8 @@ curl "$base_url/$page" -o "downloads/$page"
 ## Command Substitution
 
 The standard output of a command can be encapsulated, much like a value can be stored in a value, and then expanded by the shell. This is known as **command substitution**.  This can be done in 2 ways:
-1. enclosing the command with **$( command )**
-2. Using back-ticks **`command`**
+1. Enclosing the command with **$( command )**
+2. Using backticks: **\` command \`**
 ```
 RIGHT_NOW=$(date +"%x %r %Z")
 echo ${RIGHT_NOW}                 (or)
