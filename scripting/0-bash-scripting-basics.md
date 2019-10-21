@@ -32,9 +32,16 @@ page='index.html'
 
 curl "$base_url/$page" -o "downloads/$page"
 ```
+**CONSTANTS** As the name variable suggests, the content of a variable is subject to change based on your script. On the other hand, there may be values that, once set, should never be changed. These are called constants. As an example, **Environment Variables** are usually considered constants since they are rarely changed. 
+```
+# printenv | more
+
+echo $HOSTNAME
+echo $PWD
+```
 ## Positional Parameters
 
-A positional parameter is a variable within a shell program; its value is set from an argument specified on the command line that invokes the program. Positional parameters are numbered and are referred to with a preceding ``$'': $1, $2, $3, and so on.
+A positional parameter is a variable within a shell program; its value is set from an argument specified on the command line that invokes the program. Positional parameters are numbered and are referred to with a preceding ``$'': $1, $2, $3, etc.
 ```
 ~]$ ./some_script.sh word1 word2 word3
 ```
