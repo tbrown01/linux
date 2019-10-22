@@ -65,3 +65,19 @@ RIGHT_NOW=`date +"%x %r %Z`
 echo ${RIGHT_NOW}
 ```
 
+## Stdin, Stdout, Stderr
+
+On a Unix-like operating system, the first three file descriptors, by default, are as follows:
+
+| FD # | Type | Description |
+| --- | --- | --- |
+| FD 0  | STDIN | Standard Input|
+| FD 1  | STDOUT | Standard Output|
+| FD 2  | STDERR | Standard Error|
+
+You can hide stderr by redirecting standard input and standard output file descriptor to **/dev/null**, the special device in Linux that "goes nowhere" or you can grep off the results:
+```
+~]$ find / -name '*something*' 2>&1 | grep 'something'
+
+~]$ find / -name '*something*' 2> /dev/null/
+```
