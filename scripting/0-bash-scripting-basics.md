@@ -110,8 +110,6 @@ Sometimes we only want to do something if multiple conditions are met. Other tim
 
 - **and - &&**
 - **or - ||**
-
-For instance maybe we only want to perform an operation if the file is readable and has a size greater than zero.
 ```
 #!/bin/bash
 
@@ -120,7 +118,6 @@ if [ -r $1 ] && [ -s $1 ]
       echo This file is useful.
 fi
 ```
-Maybe we would like to perform something slightly different if the user is either bob or andy.
 ```
 #!/bin/bash
 
