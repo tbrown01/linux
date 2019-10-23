@@ -104,7 +104,7 @@ else
 fi
 ```
 
-## Boolean Operation OPERATION
+## Boolean Operation
 
 Sometimes we only want to do something if multiple conditions are met. Other times we would like to perform the action if one of several condition is met. We can accommodate these with boolean operators.
 
@@ -117,18 +117,10 @@ if [ -r $1 ] && [ -s $1 ]
    then
       echo This file is useful.
 fi
-```
-```
-#!/bin/bash
 
 if [ $USER == 'bob' ] || [ $USER == 'andy' ] 
    then
       ls -alh
-   else
-      ls
 fi
 ```
 
-
-
-```
