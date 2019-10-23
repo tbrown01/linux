@@ -194,8 +194,60 @@ stop)
 esac
 ```
 
+## Functions
+
+Think of a function as a small script within a script. It's a small chunk of code which you may call multiple times within your script. They are useful if you have certain tasks which need to be performed several times. Instead of writing out the same code over and over you may write it once in a function then call that function every time.Functions are called, triggered, simply by invoking their names. A function call is equivalent to a command.
+
+```
+#!/bin/bash
+
+function showdate(){
+   date +%F
+}
+
+function showtime() {
+   date +%r
+}
+
+function mailadmin() {
+   echo “Script Ran Successful” | mail –s “Success Script Execution” root
+}
+
+showdate
+showtime
+mailadmin
+
+```
+
 
 ## GetOps (Get Options)
+The getopts command in a script is the name of a Unix program for parsing command line arguments in shell scripts (i.e. some_script.sh -h -u) 
+```
+#!/bin/bash
 
+usage() { echo "Usage: $0 [-s <45|90>] [-p <string>]" 1>&2; exit 1; }
 
+while getopts ":s:p:" o; do
+    case "${o}" in
+        s)
+            s=${OPTARG}
+            ((s == 45 || s == 90)) || usage
+            ;;
+        p)
+            p=${OPTARG}
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+if [ -z "${s}" ] || [ -z "${p}" ]; then
+    usage
+fi
+
+echo "s = ${s}"
+echo "p = ${p}"
+```
 
