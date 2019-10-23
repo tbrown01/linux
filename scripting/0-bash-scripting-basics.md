@@ -128,15 +128,25 @@ fi
 ```
 ## For Loops
 	
-FOR LOOPS says for each of the items in a given list, perform the given set of commands. The for loop will take each item in the list (in order, one after the other), assign that item as the value of the variable var, execute the commands between do and done then go back to the top, grab the next item in the list and repeat over.
+**For Loops** says for each of the items in a given list, perform the given set of commands. The for loop will take each item in the list (in order, one after the other), assign that item as the value of the variable var, execute the commands between do and done then go back to the top, grab the next item in the list and repeat over.
 
 The list is defined as a series of strings, separated by spaces.
 
 ## While Loops
 
+The bash **while loop** is a control flow statement that allows code or commands to be executed repeatedly based on a given condition. For example, run echo command 5 times or read text file line by line or evaluate the options passed on the command line for a script.
+```
+#!/bin/bash
+x=1
+while [ $x -le 5 ]
+do
+  echo "Welcome $x times"
+  x=$(( $x + 1 ))
+done
+```
 ## Heredoc
 
-A here script (also sometimes called a here document) is an additional form of I/O redirection. It provides a way to include content that will be given to the standard input of a command. In the case of the script above, the standard input of the cat command was given a stream of text from our script.
+A **here script** (also sometimes called a here document) is an additional form of I/O redirection. It provides a way to include content that will be given to the standard input of a command. In the case of the script above, the standard input of the cat command was given a stream of text from our script.
 ```
 ~]$ cat << EOF > /home/user/file.txt
 The current working directory is: $PWD
@@ -148,10 +158,9 @@ echo "The current local working directory is: $PWD"
 echo "The current remote working directory is: \$PWD"
 EOF
 ```
-
 ##  Case Statements
-W
-ith complex scripts sometimes using a series of if and elif statements can grow to be unwieldy. Fortunately a case statement can make things cleaner. It's a little hard to explain so here are some examples to illustrate:
+
+With complex scripts sometimes using a series of if and elif statements can grow to be unwieldy. Fortunately a case statement can make things cleaner. It's a little hard to explain so here are some examples to illustrate:
 ```
 #!/bin/bash
 
