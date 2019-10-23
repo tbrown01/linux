@@ -107,6 +107,24 @@ fi
 
 The square brackets ( [ ] ) in the if statement above are actually a reference to the command test. This means that all of the operators that test allows may be used here as well. Look up the man page for test to see all of the possible operators (there are quite a few) but some of the more common ones are listed below.
 
+ **Test Operators** | **Description** |
+|         ---:|     :---     |
+| **-n STRING** |     The length of STRING is greather than zero.  |
+| **-z STRING** |     The length of STRING is zero (i.e. it is empty.  |
+| **STRING1 = STRING2** | STRING1 is equal to STRING2 |
+| **STRING1 != STRING2** | STRING1 is not equal to STRING2 |
+| **INTEGER1 -eq INTEGER2** | INTEGER1 is numerically equal to INTEGER2 |
+| **INTEGER1 -gt INTEGER2** | INTEGER1 is numerically not equal to INTEGER2 |
+| **INTEGER1 -lt INTEGER2** | INTEGER1 is numerically less equal to INTEGER2 |
+| **-e FILE** |  File exists |
+| **-d FILE** |  File exists and is a directory |
+| **-r FILE** |  File exists and the read permission is granted |
+| **-s FILE** |  File exists and it's size is greater than zero (i.e. it is not empty) |
+| **-w FILE** |  File exists and the write permission is granted  |
+| **-x FILE** |  File exists and the execute permission is granted  |
+| **! EXPERSSION** |  The EXPRESSION is False  |
+
+
 ## Boolean Opeation
 
 Sometimes we only want to do something if multiple conditions are met. Other times we would like to perform the action if one of several condition is met. We can accommodate these with boolean operators.
