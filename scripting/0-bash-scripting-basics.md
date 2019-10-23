@@ -88,20 +88,22 @@ You can hide stderr by redirecting standard input and standard output file descr
 ~]$ find / -name '*something*' 2> /dev/null/
 
 ## If, Then, Else Statements
-
+```
 **If statements** allow us to make decisions in our Bash scripts. They allow us to decide whether or not to run a piece of code based upon conditions that we may set. If statements, combined with loops allow us to make much more complex scripts which may solve larger tasks.
 ```
 #!/bin/bash
 
 if [ "${1}" -ge "18" ]; then
 
-  echo "You may go to the party."
+    echo "You may go to the party."
 
 elif [ $2 == 'yes' ]; then
   
-  echo "You may go to the party but be back before midnight."
+    echo "You may go to the party but be back before midnight."
+
 else
-  echo "You may not go to the party."
+  
+    echo "You may not go to the party."
 
 fi
 ```
