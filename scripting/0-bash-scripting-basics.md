@@ -29,10 +29,8 @@ path='/some/path'
 base_url="$domain$path"
 page='index.html'
 
-# download http://www.whitehouse.gov/some/path/index.html
-# and save to 'downloads/index.html'
-
-curl "${base_url{/${page}" -o "downloads/$page"
+echo "${base_url}/${page}"    (or)
+echo "$base_url/$page"
 ```
 **CONSTANTS** As the name variable suggests, the content of a variable is subject to change based on your script. On the other hand, there may be values that, once set, should never be changed. These are called constants. As an example, **Environment Variables** are usually considered constants since they are rarely changed. 
 ```
