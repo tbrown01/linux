@@ -51,6 +51,12 @@ $0 would contain "some_script.sh"
 $1 would contain "word1"
 $2 would contain "word2"
 $3 would contain "word3"
+
+~]$ ./some_script.sh -yes -no /home/username
+
+$# = 3
+$* = -yes -no /home/username
+$@ = array: {"-yes", "-no", "/home/username"}
 ```
 ## Command Substitution
 
