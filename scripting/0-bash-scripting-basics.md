@@ -21,8 +21,10 @@
 An essential feature of programming is the ability to use a name or a label to refer to some other quantity: such as a value, or a command. This is commonly referred to as variables.
 
 A variable is a placeholder for its value, the data it holds. Referencing (retrieving) its value is called **variable substitution**.
+
+Variables can be displaybed with dollars sign **"$VARIABLE_NAME"** or with dollar sign/curly brackets **${VARIABLE_NAME}**
 ```
-domain='http://www.whitehouse.gov'
+domain='http://www.example.com'
 path='/some/path'
 base_url="$domain$path"
 page='index.html'
@@ -30,7 +32,7 @@ page='index.html'
 # download http://www.whitehouse.gov/some/path/index.html
 # and save to 'downloads/index.html'
 
-curl "$base_url/$page" -o "downloads/$page"
+curl "${base_url{/${page}" -o "downloads/$page"
 ```
 **CONSTANTS** As the name variable suggests, the content of a variable is subject to change based on your script. On the other hand, there may be values that, once set, should never be changed. These are called constants. As an example, **Environment Variables** are usually considered constants since they are rarely changed. 
 ```
