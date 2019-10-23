@@ -134,6 +134,20 @@ The list is defined as a series of strings, separated by spaces.
 
 ## While Loops
 
+## Heredoc
+
+A here script (also sometimes called a here document) is an additional form of I/O redirection. It provides a way to include content that will be given to the standard input of a command. In the case of the script above, the standard input of the cat command was given a stream of text from our script.
+```
+~]$ cat << EOF > /home/user/file.txt
+The current working directory is: $PWD
+You are logged in as: $(whoami)
+EOF
+
+~]$ ssh -T user@host.examplem.com << EOF
+echo "The current local working directory is: $PWD"
+echo "The current remote working directory is: \$PWD"
+EOF
+```
 
 ##  Case Statements
 W
