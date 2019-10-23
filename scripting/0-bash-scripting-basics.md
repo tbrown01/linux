@@ -103,8 +103,11 @@ else
    echo "You may not go to the party."
 fi
 ```
+## Test Operators
 
-## Boolean Operation
+The square brackets ( [ ] ) in the if statement above are actually a reference to the command test. This means that all of the operators that test allows may be used here as well. Look up the man page for test to see all of the possible operators (there are quite a few) but some of the more common ones are listed below.
+
+## Boolean Opeation
 
 Sometimes we only want to do something if multiple conditions are met. Other times we would like to perform the action if one of several condition is met. We can accommodate these with boolean operators.
 
@@ -123,4 +126,35 @@ if [ $USER == 'bob' ] || [ $USER == 'andy' ]
       ls -alh
 fi
 ```
+## For Loops
+	
+FOR LOOPS says for each of the items in a given list, perform the given set of commands. The for loop will take each item in the list (in order, one after the other), assign that item as the value of the variable var, execute the commands between do and done then go back to the top, grab the next item in the list and repeat over.
+
+The list is defined as a series of strings, separated by spaces.
+
+## While Loops
+
+
+##  Case Statements
+W
+ith complex scripts sometimes using a series of if and elif statements can grow to be unwieldy. Fortunately a case statement can make things cleaner. It's a little hard to explain so here are some examples to illustrate:
+```
+#!/bin/bash
+
+case ${1} in
+start)
+    echo "starting"
+    ;;
+stop)
+    echo "stopping"
+    ;;
+*)
+    echo "option not valid"
+esac
+```
+
+
+## GetOps (Get Options)
+
+
 
